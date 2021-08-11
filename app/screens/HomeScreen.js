@@ -12,6 +12,7 @@ import mapImg from '../../assets/images/RectangleMap.png';
 
 import Colors from '../config/Colors';
 import Card from '../components/Card';
+import BottomTabs from '../components/BottomTabs';
 
 function HomeScreen(props) {
 
@@ -37,6 +38,7 @@ function HomeScreen(props) {
             <StatusBar barStyle="dark-content" backgroundColor={Colors.white} />
             <ScrollView style={{ width: "100%" }}>
                 <View style={styles.container}>
+
                     <View style={{ height: RFPercentage(8), flexDirection: "row", width: "85%", justifyContent: "center", alignItems: "center" }} >
                         <View>
                             <Image resizeMode="contain" width={RFPercentage(7)} height={RFPercentage(7)} source={profileImg1} style={{ borderRadius: 4, width: RFPercentage(7), height: RFPercentage(7) }} />
@@ -83,7 +85,7 @@ function HomeScreen(props) {
                     </View>
 
                     {/* last showings */}
-                    <View style={{ marginTop: RFPercentage(3), flexDirection: "column", width: "80%", justifyContent: "center", alignItems: "center" }} >
+                    <View style={{ marginTop: RFPercentage(20), flexDirection: "column", width: "80%", justifyContent: "center", alignItems: "center" }} >
                         <View style={{ marginBottom: 5, alignItems: "center", flexDirection: "row", width: "97%", justifyContent: "space-between" }} >
                             <Text style={{ fontSize: RFPercentage(2.8), color: Colors.primary, fontWeight: "bold" }} >Your Last Showings</Text>
                             <Text style={{ color: "#585CE5" }} >see all</Text>
@@ -113,6 +115,8 @@ function HomeScreen(props) {
                     </View>
                 </View>
             </ScrollView>
+
+            <BottomTabs />
         </View>
     );
 }
