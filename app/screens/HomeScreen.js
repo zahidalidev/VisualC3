@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Image, StatusBar, StyleSheet, View, Text, ScrollView, FlatList } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import { MaterialIcons, Feather } from "@expo/vector-icons";
-import { LinearGradient } from 'expo-linear-gradient';
 
-import img1 from "../../assets/images/Rectangle61.png"
+// images
+import profileImg from "../../assets/images/Rectangle61.png"
 import logo from "../../assets/images/CompanyLogo.png"
 import guardeIcon from '../../assets/images/VectorHome.png';
 import alertIcon from '../../assets/images/AlertIcon.png';
@@ -16,7 +16,7 @@ import BottomTabs from '../components/BottomTabs';
 
 function HomeScreen(props) {
 
-    const [profileImg1, setProfileImg1] = useState(img1)
+    const [profileImg1, setProfileImg1] = useState(profileImg)
     const [cardData, setCardData] = useState([
         {
             id: 0,
@@ -34,7 +34,7 @@ function HomeScreen(props) {
 
 
     return (
-        <View style={{ flex: 1 }} >
+        <View style={{ flex: 1, backgroundColor: Colors.white }} >
             <StatusBar barStyle="dark-content" backgroundColor={Colors.white} />
             <ScrollView style={{ width: "100%" }}>
                 <View style={styles.container}>

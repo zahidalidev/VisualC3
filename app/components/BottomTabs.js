@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, ImageBackground, View } from 'react-native';
+import { Image, ImageBackground, TouchableOpacity, View } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons"
 
@@ -12,9 +12,23 @@ function BottomTabs(props) {
     return (
         <View style={{ position: "absolute", bottom: 0, left: 0, right: 0, width: "100%" }}>
             <ImageBackground style={{ justifyContent: "space-around", flexDirection: "row", width: "100%", height: RFPercentage(9) }} source={bottomImg}  >
-                <View style={{ justifyContent: "center", alignItems: 'center', elevation: 10, position: "absolute", bottom: RFPercentage(-3), left: RFPercentage(8.5), marginBottom: RFPercentage(5), width: RFPercentage(8), height: RFPercentage(8), borderRadius: RFPercentage(10), backgroundColor: Colors.primaryShade }} >
+                <TouchableOpacity style={{
+                    shadowColor: "#000",
+                    shadowOffset: {
+                        width: 0,
+                        height: 5,
+                    },
+                    shadowOpacity: 0.34,
+                    shadowRadius: 6.27,
+                    elevation: 10, justifyContent: "center",
+                    alignItems: 'center', position: "absolute",
+                    bottom: RFPercentage(-3), left: RFPercentage(8.5),
+                    marginBottom: RFPercentage(5), width: RFPercentage(8),
+                    height: RFPercentage(8), borderRadius: RFPercentage(10),
+                    backgroundColor: Colors.primaryShade
+                }} >
                     <Image source={homeImg} />
-                </View>
+                </TouchableOpacity>
                 <View style={{ width: "50%", justifyContent: "center", alignItems: 'flex-end' }} >
                     <MaterialCommunityIcons name="chat" color={Colors.borderDark} size={RFPercentage(4)} />
                 </View>
