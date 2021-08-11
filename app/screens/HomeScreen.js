@@ -8,6 +8,7 @@ import img1 from "../../assets/images/Rectangle61.png"
 import logo from "../../assets/images/CompanyLogo.png"
 import guardeIcon from '../../assets/images/VectorHome.png';
 import alertIcon from '../../assets/images/AlertIcon.png';
+import mapImg from '../../assets/images/RectangleMap.png';
 
 import Colors from '../config/Colors';
 import Card from '../components/Card';
@@ -81,6 +82,35 @@ function HomeScreen(props) {
                         />
                     </View>
 
+                    {/* last showings */}
+                    <View style={{ marginTop: RFPercentage(3), flexDirection: "column", width: "80%", justifyContent: "center", alignItems: "center" }} >
+                        <View style={{ marginBottom: 5, alignItems: "center", flexDirection: "row", width: "97%", justifyContent: "space-between" }} >
+                            <Text style={{ fontSize: RFPercentage(2.8), color: Colors.primary, fontWeight: "bold" }} >Your Last Showings</Text>
+                            <Text style={{ color: "#585CE5" }} >see all</Text>
+                        </View>
+                        <View style={{ backgroundColor: Colors.lightBackground, padding: RFPercentage(1.2), height: RFPercentage(17), flexDirection: "column", width: "100%", justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: Colors.borderGreen, borderRadius: RFPercentage(2.5) }} >
+
+                            <View style={{ marginBottom: RFPercentage(1), flexDirection: "row", justifyContent: "space-between", flex: 1, width: "90%", alignItems: "center" }} >
+                                <View style={{ justifyContent: "center", alignItems: "center", backgroundColor: Colors.borderBlue, borderRadius: RFPercentage(2), width: RFPercentage(7), height: RFPercentage(7), color: Colors }} >
+                                    <Text style={{ color: Colors.white }} >July</Text>
+                                    <Text style={{ color: Colors.white, fontWeight: "bold" }} >Friday</Text>
+                                    <Text style={{ color: Colors.white, fontWeight: "bold" }} >2</Text>
+                                </View>
+                                <View>
+                                    <Text style={{ color: Colors.primary, fontWeight: "bold" }} >420 Baxtor Rd, Jupiter</Text>
+                                    <Text style={{ color: Colors.grey }} >+ Notes</Text>
+                                    <Text style={{ color: Colors.grey }} >+ Attachments</Text>
+                                </View>
+                                <View style={{ justifyContent: "center", alignItems: "center", borderRadius: RFPercentage(2), width: RFPercentage(7), height: RFPercentage(7), color: Colors }} >
+                                    <Image resizeMode="contain" width={RFPercentage(9)} height={RFPercentage(9)} source={mapImg} style={{ borderRadius: 4, width: RFPercentage(9), height: RFPercentage(9) }} />
+                                </View>
+                            </View>
+
+                            <View style={{ borderRadius: RFPercentage(1.5), width: "95%", maxHeight: RFPercentage(6), backgroundColor: Colors.lightGreen, flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center", marginLeft: RFPercentage(1) }} >
+                                <Text style={{ color: Colors.borderGreen, fontSize: RFPercentage(2.1), fontWeight: "bold" }} >9:20am  - 11:50am</Text>
+                            </View>
+                        </View>
+                    </View>
                 </View>
             </ScrollView>
         </View>
