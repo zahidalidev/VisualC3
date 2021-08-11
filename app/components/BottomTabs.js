@@ -19,7 +19,7 @@ function BottomTabs(props) {
                     <MaterialCommunityIcons name="chat" color={Colors.borderDark} size={RFPercentage(4)} />
                 </View>
                 <View style={{ width: "30%", justifyContent: "center", alignItems: 'center' }} >
-                    <Ionicons name="notifications-outline" color={Colors.black} size={RFPercentage(4)} />
+                    <Ionicons name="notifications-outline" color={"#2A2A64"} size={RFPercentage(3.4)} />
                 </View>
             </ImageBackground>
         </View>
