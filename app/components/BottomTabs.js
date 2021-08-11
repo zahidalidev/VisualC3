@@ -30,10 +30,14 @@ function BottomTabs(props) {
                     <Image source={homeImg} />
                 </TouchableOpacity>
                 <View style={{ width: "50%", justifyContent: "center", alignItems: 'flex-end' }} >
-                    <MaterialCommunityIcons name="chat" color={Colors.borderDark} size={RFPercentage(4)} />
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="chat" color={Colors.borderDark} size={RFPercentage(4)} />
+                    </TouchableOpacity>
                 </View>
                 <View style={{ width: "30%", justifyContent: "center", alignItems: 'center' }} >
-                    <Ionicons name="notifications-outline" color={"#2A2A64"} size={RFPercentage(3.4)} />
+                    <TouchableOpacity>
+                        <Ionicons name="notifications-outline" color={"#2A2A64"} size={RFPercentage(3.4)} />
+                    </TouchableOpacity>
                 </View>
             </ImageBackground>
         </View>

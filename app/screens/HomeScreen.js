@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, StatusBar, StyleSheet, View, Text, ScrollView, FlatList } from 'react-native';
+import { Image, StatusBar, StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import { MaterialIcons, Feather } from "@expo/vector-icons";
 
@@ -53,7 +53,9 @@ function HomeScreen(props) {
                             </View>
                         </View>
                         <View style={{ borderWidth: 1, borderRadius: 10, borderColor: Colors.border, padding: RFPercentage(0.7) }} >
-                            <Feather name="settings" size={RFPercentage(3)} color={Colors.grey} />
+                            <TouchableOpacity>
+                                <Feather name="settings" size={RFPercentage(3)} color={Colors.grey} />
+                            </TouchableOpacity>
                         </View>
                     </View>
 
