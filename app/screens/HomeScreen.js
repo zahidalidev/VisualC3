@@ -1,17 +1,35 @@
 import React, { useState } from 'react';
-import { Image, StatusBar, StyleSheet, View, Text, ScrollView } from 'react-native';
+import { Image, StatusBar, StyleSheet, View, Text, ScrollView, FlatList } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import { MaterialIcons, Feather } from "@expo/vector-icons";
-
+import { LinearGradient } from 'expo-linear-gradient';
 
 import img1 from "../../assets/images/Rectangle61.png"
 import logo from "../../assets/images/CompanyLogo.png"
+import guardeIcon from '../../assets/images/VectorHome.png';
+import alertIcon from '../../assets/images/AlertIcon.png';
 
 import Colors from '../config/Colors';
+import Card from '../components/Card';
 
 function HomeScreen(props) {
 
     const [profileImg1, setProfileImg1] = useState(img1)
+    const [cardData, setCardData] = useState([
+        {
+            id: 0,
+            title: "GuardMe",
+            type: "guard",
+            iconImg: guardeIcon
+        },
+        {
+            id: 1,
+            title: "Panic",
+            type: "panic",
+            iconImg: alertIcon
+        },
+    ])
+
 
     return (
         <View style={{ flex: 1 }} >
@@ -45,11 +63,22 @@ function HomeScreen(props) {
                             <View style={{ marginLeft: RFPercentage(1) }} >
                                 <Text style={{ letterSpacing: 0.8, fontSize: RFPercentage(3.2), fontWeight: "bold", color: Colors.primary }} >Premier Brokers</Text>
                             </View>
-                            <View style={{ marginLeft: RFPercentage(0.5), padding: RFPercentage(0.4), paddingLeft: RFPercentage(1), paddingRight: RFPercentage(1), borderRadius: RFPercentage(1), flexDirection: "row", justifyContent: "center", alignItems: 'center' }} >
-                                <View style={{ width: RFPercentage(1.3), height: RFPercentage(1.3), borderRadius: 3, backgroundColor: Colors.danger }} ></View>
+                            <View style={{ flex: 1, marginLeft: RFPercentage(0.5), padding: RFPercentage(0.4), paddingLeft: RFPercentage(1), paddingRight: RFPercentage(1), borderRadius: RFPercentage(1), flexDirection: "row", justifyContent: "center", alignItems: 'center' }} >
+                                <View style={{ width: RFPercentage(1.2), height: RFPercentage(1.2), borderRadius: 3, backgroundColor: Colors.danger }} ></View>
                                 <Text style={{ fontSize: RFPercentage(2.7), marginLeft: RFPercentage(0.5), color: Colors.borderDark, letterSpacing: 1.2 }} >Palm Beach Gardens</Text>
                             </View>
                         </View>
+                    </View>
+
+                    <View style={{ marginTop: RFPercentage(3), justifyContent: 'space-between', alignItems: "center", flex: 1, flexDirection: "row", width: "85%" }} >
+                        <FlatList
+                            data={cardData}
+                            keyExtractor={(item, index) => index.toString()}
+                            numColumns={2}
+                            showsVerticalScrollIndicator={false}
+                            renderItem={({ item, index }) => <Card cardStyle={{ marginLeft: index % 2 == 1 ? RFPercentage(4) : 0 }} data={item} />}
+                            contentContainerStyle={{ alignItems: "center" }}
+                        />
                     </View>
 
                 </View>

@@ -14,7 +14,11 @@ const Colors = {
     grey: "#808080",
     danger: "#C45656",
     border: "rgba(88, 92, 229, 0.17)",
-    borderDark: "rgba(59, 151, 212, 0.5)"
+    borderDark: "rgba(59, 151, 212, 0.5)",
+    lightBackground: "#ECF2FF",
+    primaryShade: "#4E89CA",
+    darkShade: "#2D2D2D",
+    dangerShade: "#C24646"
     // border: "#585CE5"
 }
 export default Colors;
